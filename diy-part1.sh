@@ -9,7 +9,7 @@
 # File name: diy-part1.sh
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
-
+nl ../targrt/linux/ipq40xx/Makefile | sed 's/4.19/5.4/g'
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
