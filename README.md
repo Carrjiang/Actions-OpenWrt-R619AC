@@ -4,6 +4,8 @@
 ![Build OpenWrt](https://github.com/Carrjiang/Actions-OpenWrt-RW619/workflows/Build%20OpenWrt/badge.svg)
 
 Build OpenWrt for P&W RW619AC using GitHub Actions
+Kernel Version : 5.4
+Support IPV6
 
  base from [P3TERX/Actions-OpenWrt](https://github.com/P3TERX/Actions-OpenWrt)
 
