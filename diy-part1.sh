@@ -11,6 +11,10 @@
 #
 cd openwrt
 sed 's/4.19/5.4/g' target/linux/ipq40xx/Makefile
+cd package/lean/
+git clone https://github.com/jerrykuku/node-request.git
+git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git
+
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
