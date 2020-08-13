@@ -10,7 +10,7 @@
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
 cd openwrt
-cp -r target\linux\ipq40xx\files\arch target\linux\ipq40xx\files-5.4\arch
+cp -r target/linux/ipq40xx/files/arch target/linux/ipq40xx/files-5.4/arch
 sed 's/4.19/5.4/g' target/linux/ipq40xx/Makefile
 cd package/lean/
 git clone https://github.com/jerrykuku/node-request.git
