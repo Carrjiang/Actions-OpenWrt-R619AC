@@ -10,7 +10,7 @@
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
 cd openwrt
-nl ./targrt/linux/ipq40xx/Makefile | sed 's/4.19/5.4/g'
+sed 's/4.19/5.4/g' target/linux/ipq40xx/Makefile
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
