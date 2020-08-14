@@ -5,7 +5,7 @@
 
 Build OpenWrt for P&W R619AC using GitHub Actions
 
-Kernel Version : 5.4
+Kernel Version : 4.19
 
 Support IPV6
 
