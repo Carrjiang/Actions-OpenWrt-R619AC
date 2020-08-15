@@ -9,8 +9,6 @@
 # File name: diy-part1.sh
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
-cp -r target/linux/ipq40xx/files/arch target/linux/ipq40xx/files-5.4/arch
-sed 's/4.19/5.4/g' target/linux/ipq40xx/Makefile
 cd package/lean/
 git clone https://github.com/jerrykuku/node-request.git
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git
