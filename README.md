@@ -27,6 +27,8 @@ Base from [P3TERX/Actions-OpenWrt](https://github.com/P3TERX/Actions-OpenWrt)
 - [Cowtransfer](https://cowtransfer.com)
 - [WeTransfer](https://wetransfer.com/)
 - [Mikubill/transfer](https://github.com/Mikubill/transfer)
+- [luci-app-jd-dailybonus](https://github.com/jerrykuku/luci-app-jd-dailybonus)
+- [luci-app-adguardhome](https://github.com/rufengsuixing/luci-app-adguardhome)
 
 ## License
 
