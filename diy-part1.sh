@@ -18,3 +18,4 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 cd package/lean/
 git clone https://github.com/jerrykuku/node-request.git
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git
+git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
