@@ -31,7 +31,7 @@ Base from [P3TERX/Actions-OpenWrt](https://github.com/P3TERX/Actions-OpenWrt)
 - [luci-app-jd-dailybonus](https://github.com/jerrykuku/luci-app-jd-dailybonus)
 - [luci-app-adguardhome](https://github.com/rufengsuixing/luci-app-adguardhome)
 - [kenzo's openwrt-packages collection](https://github.com/kenzok8/openwrt-packages)
-- [liran001's openwrt-packages collection](https://github.com/liuran001/openwrt-packages)
+- [liuran001's openwrt-packages collection](https://github.com/liuran001/openwrt-packages)
 
 ## License
 
