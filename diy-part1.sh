@@ -17,3 +17,4 @@
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 cd package
 git clone https://github.com/liuran001/openwrt-packages
+git clone https://github.com/destan19/OpenAppFilter.git
