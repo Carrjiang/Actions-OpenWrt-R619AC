@@ -21,3 +21,5 @@ git clone https://github.com/kenzok8/small.git
 git clone https://github.com/destan19/OpenAppFilter.git
 git clone https://github.com/zzsj0928/luci-app-serverchand
 git clone https://github.com/tty228/luci-app-serverchan
+git clone https://github.com/siropboy/luci-theme-btmod 
+
