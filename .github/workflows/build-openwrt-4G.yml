@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build OpenWrt with SSR+
+name: Build OpenWrt 4G Version
 
 on:
   repository_dispatch:
@@ -23,7 +23,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: mod.config
+  CONFIG_FILE: 4G.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: false
@@ -31,7 +31,7 @@ env:
   UPLOAD_COWTRANSFER: true
   UPLOAD_WETRANSFER: true
   UPLOAD_RELEASE: true
-  IMAGE_VERSION: ModVer
+  IMAGE_VERSION: 4GVer
   TZ: Asia/Shanghai
 
 jobs:
@@ -98,7 +98,7 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-        
+
     - name: Compile the firmware
       id: compile
       run: |
@@ -129,7 +129,7 @@ jobs:
         rm -rf packages
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "::set-output name=status::success"
-        
+
     - name: Upload firmware directory
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
@@ -144,7 +144,7 @@ jobs:
         curl -fsSL git.io/file-transfer | sh
         ./transfer cow --block 2621440 -s -p 64 --no-progress ${FIRMWARE} 2>&1 | tee cowtransfer.log
         echo "::warning file=cowtransfer.com::$(cat cowtransfer.log | grep https)"
-                 echo "::set-output name=url::$(cat cowtransfer.log | grep https | cut -f3 -d" ")"
+         echo "::set-output name=url::$(cat cowtransfer.log | grep https | cut -f3 -d" ")"
 
     - name: Upload firmware to WeTransfer
       id: wetransfer
@@ -153,7 +153,7 @@ jobs:
         curl -fsSL git.io/file-transfer | sh
         ./transfer wet -s -p 16 --no-progress ${FIRMWARE} 2>&1 | tee wetransfer.log
         echo "::warning file=wetransfer.com::$(cat wetransfer.log | grep https)"
-                        echo "::set-output name=url::$(cat wetransfer.log | grep https | cut -f3 -d" ")"
+                echo "::set-output name=url::$(cat wetransfer.log | grep https | cut -f3 -d" ")"
 
     - name: Generate release tag
       id: tag
@@ -185,7 +185,7 @@ jobs:
       uses: dev-drprasad/delete-older-releases@v0.1.0
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       with:
-        keep_latest: 4
+        keep_latest: 6
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
