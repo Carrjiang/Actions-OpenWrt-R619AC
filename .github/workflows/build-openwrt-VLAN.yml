@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build OpenWrt Mod Version
+name: Build OpenWrt Mod Version with VLAN
 
 on:
   repository_dispatch:
